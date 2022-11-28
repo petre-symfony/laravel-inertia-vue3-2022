@@ -9,6 +9,6 @@
     </head>
     <body>
         @inertia {{-- -The same as
-        <div id="app" data-page="{{ json_encode($page) }}"></div>-}}
+        <div id="app" data-page="{{ json_encode($page) }}"></div> --}}
     </body>
 </html>
