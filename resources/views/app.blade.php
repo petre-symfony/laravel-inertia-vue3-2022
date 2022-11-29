@@ -9,7 +9,9 @@
         @inertiaHead
     </head>
     <body>
-        @inertia {{-- -The same as
-        <div id="app" data-page="{{ json_encode($page) }}"></div> --}}
+        <section class="p-8">
+            @inertia {{-- -The same as
+            <div id="app" data-page="{{ json_encode($page) }}"></div> --}}
+        </section>
     </body>
 </html>
