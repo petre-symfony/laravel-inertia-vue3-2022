@@ -8,9 +8,9 @@
                 >Home</Link>
             </li>
             <li>
-                <Link href="/users"
+                <Link href="/users?foo=bar"
                     class="text-blue-500 hover:underline"
-                    :class="{'font-bold underline': $page.url == '/users'}"
+                    :class="{'font-bold underline': $page.url.startsWith('/users')}"
                 >Users</Link>
             </li>
             <li>
