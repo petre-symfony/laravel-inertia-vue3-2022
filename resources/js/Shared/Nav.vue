@@ -4,20 +4,20 @@
             <li>
                 <Link href="/"
                     class="text-blue-500 hover:underline"
-                    :class="{'font-bold underline': $page.url == '/'}"
+                    :class="{'font-bold underline': $page.component === 'Home'}"
                 >Home</Link>
             </li>
             <li>
                 <Link href="/users?foo=bar"
                     class="text-blue-500 hover:underline"
-                    :class="{'font-bold underline': $page.url.startsWith('/users')}"
+                    :class="{'font-bold underline': $page.component === 'Users'}"
                 >Users</Link>
             </li>
             <li>
                 <Link
                     href="/settings"
                     class="text-blue-500 hover:underline"
-                    :class="{'font-bold underline': $page.url == '/settings'}"
+                    :class="{'font-bold underline': $page.component === 'Settings'}"
                 >Settings</Link></li>
             <li><Link href="/logout" method="POST" :data="{ foo: 'bar'}" as="button" class="text-blue-500 hover:underline">Log Out</Link></li>
         </ul>
