@@ -7,7 +7,7 @@
     The current time is {{ time }}
     </div>
 
-    <Link href="/users" class="text-blue-500">Refresh</Link>
+    <Link href="/users" class="text-blue-500" preserve-scroll>Refresh</Link>
 </template>
 
 <script>
