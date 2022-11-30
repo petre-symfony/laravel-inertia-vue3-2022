@@ -12,11 +12,10 @@
 
 <script>
 import Layout from '../Shared/Layout'
-import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
     name: "Users",
-    components: { Layout, Link },
+    components: { Layout },
     props: {
         time: String
     }
