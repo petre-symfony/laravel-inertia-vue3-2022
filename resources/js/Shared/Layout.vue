@@ -7,7 +7,9 @@
     </section>
 
     <section class="p-6">
-        <slot/>
+        <div class="max-w-3xl mx-auto">
+            <slot/>
+        </div>
     </section>
 </template>
 
