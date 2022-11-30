@@ -1,5 +1,5 @@
 <template>
-    <header class="flex">
+    <header class="flex bg-gray-200">
         <h1 class="font-bold text-lg">My App</h1>
         <Nav />
     </header>
