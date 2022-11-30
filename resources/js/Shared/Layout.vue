@@ -22,8 +22,10 @@ import Nav from './Nav'
 export default {
     name: "Layout",
     components: { Nav },
-    props: {
-        username: String
+    computed: {
+        username() {
+            return this.$page.props.auth.user.username
+        }
     }
 }
 </script>
