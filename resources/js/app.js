@@ -12,7 +12,7 @@ createInertiaApp({
         }
 
         page.layout ??= Layout
-        
+
         return page
     },
     setup({ el, App, props, plugin }) {
