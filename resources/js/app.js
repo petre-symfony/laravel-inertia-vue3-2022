@@ -7,8 +7,12 @@ createInertiaApp({
     resolve: name => {
         let page = require(`./Pages/${name}`).default
 
-        page.layout = Layout
+        if(!page.layout) {
+            page.layout = Layout
+        }
 
+        page.layout ??= Layout
+        
         return page
     },
     setup({ el, App, props, plugin }) {
