@@ -14,6 +14,14 @@
 
     <section class="p-6">
         <div class="max-w-3xl mx-auto">
+            <iframe
+                class="mb-6"
+                width="100%"
+                src="https://player.simplecast.com/fd0bd2ba-c553-466c-a060-b144797ce369?dark=false"
+                frameborder="0"
+                scrolling="no"
+                seamless
+            ></iframe>
             <slot/>
         </div>
     </section>
