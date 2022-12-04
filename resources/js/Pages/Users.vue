@@ -30,6 +30,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Paginator -->
+    <div class="mt-6">
+        <Link v-for="link in users.links" :href="link.url" v-html="link.label"/>
+    </div>
 </template>
 
 <script setup>
