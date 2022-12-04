@@ -1,5 +1,5 @@
 <template>
-
+    <Head title="My App - Users"></Head>
     <h1 class="text-3xl">Users</h1>
 
     <div style="margin-top: 400px">
@@ -11,11 +11,12 @@
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/inertia-vue3'
+    import { Link } from '@inertiajs/inertia-vue3'
+    import { Head } from '@inertiajs/inertia-vue3'
 
-defineProps({
-    time: String
-})
+    defineProps({
+        time: String
+    })
 
 </script>
 
