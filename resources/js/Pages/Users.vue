@@ -43,11 +43,12 @@
     import {ref, watch} from "vue"
     import { Inertia } from '@inertiajs/inertia'
 
-    let search = ref('')
-
-    defineProps({
-        users: Object
+    let props = defineProps({
+        users: Object,
+        filters: Object
     })
+
+    let search = ref(props.filters.search)
 
     watch(search, value => {
         Inertia.get('/users', { search: value }, {
