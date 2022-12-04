@@ -2,19 +2,24 @@
     <Head title="Users"></Head>
     <h1 class="text-3xl">Users</h1>
 
-    <div style="margin-top: 400px">
-    The current time is {{ time }}
-    </div>
+    <h1 class="text-3xl">
+        Home
+    </h1>
 
-    <Link href="/users" class="text-blue-500" preserve-scroll>Refresh</Link>
-
+    <ul>
+        <li
+            v-for="user in users"
+            :key="user.id"
+            v-text="user.name"
+        ></li>
+    </ul>
 </template>
 
 <script setup>
     import { Link } from '@inertiajs/inertia-vue3'
 
     defineProps({
-        time: String
+        users: Array
     })
 
 </script>
