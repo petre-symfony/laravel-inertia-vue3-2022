@@ -1,11 +1,10 @@
 <template>
     <Head title="Users"></Head>
-    <h1 class="text-3xl">Users</h1>
+    <div class="flex justify-between mb-6">
+        <h1 class="text-3xl">Users</h1>
 
-    <h1 class="text-3xl">
-        Home
-    </h1>
-
+        <input v-model="search" type="text" placeholder="Search..." class="border px-2 rounded-lg">
+    </div>
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -41,11 +40,17 @@
 
 <script setup>
     import Pagination from '../Shared/Pagination'
+    import {ref, watch} from "vue"
+
+    let search = ref('')
 
     defineProps({
         users: Object
     })
 
+    watch(search, value => {
+        console.log(`Changed - ${value}`)
+    })
 </script>
 
 <style scoped>
