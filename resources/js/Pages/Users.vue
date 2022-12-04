@@ -50,7 +50,9 @@
     })
 
     watch(search, value => {
-        Inertia.get('/users', { search: value })
+        Inertia.get('/users', { search: value }, {
+            preserveState: true
+        })
     })
 </script>
 
