@@ -34,15 +34,14 @@
     <!-- Paginator -->
 
     <div class="mt-6">
-        <template v-for="link in users.links">
-            <Link
-                v-if="link.url"
-                :href="link.url"
-                v-html="link.label"
-            />
-
-            <span v-else v-html="link.label"></span>
-        </template>
+        <Component
+            v-for="link in users.links"
+            :is="link.url ? 'Link' : 'span'"
+            :href="link.url"
+            v-html="link.label"
+            class="px-1"
+            :class="link.url ? '' : 'text-gray-500'"
+        />
     </div>
 
 </template>
