@@ -41,6 +41,7 @@
 <script setup>
     import Pagination from '../Shared/Pagination'
     import {ref, watch} from "vue"
+    import { Inertia } from '@inertiajs/inertia'
 
     let search = ref('')
 
@@ -49,7 +50,7 @@
     })
 
     watch(search, value => {
-        console.log(`Changed - ${value}`)
+        Inertia.get('/users', { search: value })
     })
 </script>
 
