@@ -12,7 +12,6 @@
 
 <script setup>
     import { Link } from '@inertiajs/inertia-vue3'
-    import { Head } from '@inertiajs/inertia-vue3'
 
     defineProps({
         time: String
