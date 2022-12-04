@@ -1,4 +1,5 @@
 <template>
+    <Head title="My App"></Head>
     <section class="p-6 bg-gray-200">
         <header class="flex justify-between">
             <div class="flex items-center">
@@ -18,17 +19,21 @@
     </section>
 </template>
 
+<script setup>
+    import { Head } from '@inertiajs/inertia-vue3'
+</script>
+
 <script>
-import Nav from './Nav'
-export default {
-    name: "Layout",
-    components: { Nav },
-    computed: {
-        username() {
-            return this.$page.props.auth.user.username
+    import Nav from './Nav'
+    export default {
+        name: "Layout",
+        components: { Nav },
+        computed: {
+            username() {
+                return this.$page.props.auth.user.username
+            }
         }
     }
-}
 </script>
 
 <style scoped>
