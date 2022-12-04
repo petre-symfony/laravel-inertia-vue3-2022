@@ -52,7 +52,8 @@
 
     watch(search, value => {
         Inertia.get('/users', { search: value }, {
-            preserveState: true
+            preserveState: true,
+            replace: true
         })
     })
 </script>
