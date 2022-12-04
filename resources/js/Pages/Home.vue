@@ -1,5 +1,7 @@
 <template>
-    <Head title="My App - Home"></Head>
+    <Head title="My App - Home">
+        <meta type="description" content="Home information">
+    </Head>
     <h1 class="text-3xl">Home</h1>
 </template>
 
