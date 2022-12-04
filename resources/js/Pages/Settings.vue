@@ -1,5 +1,5 @@
 <template>
-    <Head title="My App - Settings"></Head>
+    <Head title="Settings"></Head>
     <h1 class="text-3xl">Settings</h1>
 </template>
 

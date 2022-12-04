@@ -1,5 +1,5 @@
 <template>
-    <Head title="My App - Users"></Head>
+    <Head title="Users"></Head>
     <h1 class="text-3xl">Users</h1>
 
     <div style="margin-top: 400px">
