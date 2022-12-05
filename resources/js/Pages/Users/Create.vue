@@ -6,17 +6,17 @@
     <form @submit.prevent="submit" method="POST" class="max-w-md mx-auto mt-8">
         <div class="mb-6">
             <label for="name" class="block mb-2 uppercase font-bold text-xs text-gray-700">Name</label>
-            <input v-model="form.name" type="text" class="border border-gray-400 p-2 w-full" name="name" id="name" required>
+            <input v-model="form.name" type="text" class="border border-gray-400 p-2 w-full" name="name" id="name">
         </div>
 
         <div class="mb-6">
             <label for="email" class="block mb-2 uppercase font-bold text-xs text-gray-700">Email</label>
-            <input v-model="form.email" type="text" class="border border-gray-400 p-2 w-full" name="email" id="email" required>
+            <input v-model="form.email" type="text" class="border border-gray-400 p-2 w-full" name="email" id="email">
         </div>
 
         <div class="mb-6">
             <label for="password" class="block mb-2 uppercase font-bold text-xs text-gray-700">Password</label>
-            <input v-model="form.password" type="password" class="border border-gray-400 p-2 w-full" name="password" id="password" required>
+            <input v-model="form.password" type="password" class="border border-gray-400 p-2 w-full" name="password" id="password">
         </div>
 
         <div class="mb-6">
