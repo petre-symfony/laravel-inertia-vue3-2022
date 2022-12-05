@@ -45,8 +45,10 @@
     let processing = ref(false)
 
     let submit = () => {
-        processing.value = true
-        //Inertia.post('/users', form)
+        Inertia.post('/users', form, {
+            onStart: () => { processing.value = true },
+            onFinish: () => { processing.value = false }
+        })
     }
 
     defineProps({
