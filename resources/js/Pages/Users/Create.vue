@@ -23,13 +23,17 @@
         </div>
 
         <div class="mb-6">
-            <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500">Submit</button>
+            <button
+                type="submit"
+                class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
+                :disabled="processing"
+            >Submit</button>
         </div>
     </form>
 </template>
 
 <script setup>
-    import { reactive } from 'vue'
+    import { reactive, ref } from 'vue'
     import { Inertia } from "@inertiajs/inertia"
 
     let form = reactive({
@@ -38,8 +42,11 @@
         password: ''
     })
 
+    let processing = ref(false)
+
     let submit = () => {
-        Inertia.post('/users', form)
+        processing.value = true
+        //Inertia.post('/users', form)
     }
 
     defineProps({
