@@ -43,6 +43,10 @@ export default {
         email: '',
         password: ''
     })
+
+    let submit = () => {
+        form.post('/login')
+    }
 </script>
 
 <style scoped>
