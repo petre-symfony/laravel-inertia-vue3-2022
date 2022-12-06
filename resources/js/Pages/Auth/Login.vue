@@ -1,10 +1,11 @@
 <template>
     <Head title="Login Page"/>
 
-    <h1 class="text-3xl">Login</h1>
-    <main>
-        <section class="bg-white p-8 rounded">
-            <form @submit.prevent="submit" method="POST" class="max-w-md mx-auto mt-8">
+    <main class="grid place-items-center min-h-screen">
+        <section class="bg-white p-8 rounded-xl max-w-md mx-auto border">
+            <h1 class="text-3xl mb-6">Login</h1>
+
+            <form @submit.prevent="submit" method="POST">
                 <div class="mb-6">
                     <label for="email" class="block mb-2 uppercase font-bold text-xs text-gray-700">Email</label>
                     <input v-model="form.email" type="text" class="border border-gray-400 p-2 w-full" name="email" id="email" required>
