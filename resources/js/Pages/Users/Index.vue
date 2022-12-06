@@ -47,7 +47,7 @@
     import Pagination from '../../Shared/Pagination'
     import {ref, watch} from "vue"
     import { Inertia } from '@inertiajs/inertia'
-    import throttle from 'lodash/throttle'
+    import debounce from 'lodash/debounce'
 
     let props = defineProps({
         users: Object,
@@ -56,8 +56,7 @@
 
     let search = ref(props.filters.search)
 
-    watch(search, throttle(function (value) {
-        console.log('triggered')
+    watch(search, debounce(function (value) {
         Inertia.get('/users', { search: value }, {
             preserveState: true,
             replace: true
