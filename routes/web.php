@@ -37,7 +37,10 @@ Route::middleware('auth')->group(function(){
                     'id' => $user->id,
                     'name' => $user->name
                 ]),
-            'filters' => Request::only(['search'])
+            'filters' => Request::only(['search']),
+            'can' => [
+                'createUser' => auth()->user()->email === 'barton.dudley@example.net'
+            ]
         ]);
     });
 
