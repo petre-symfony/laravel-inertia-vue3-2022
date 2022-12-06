@@ -39,14 +39,14 @@ Route::middleware('auth')->group(function(){
                 ]),
             'filters' => Request::only(['search']),
             'can' => [
-                'createUser' => auth()->user()->email === 'barton.dudley@example.net'
+                'createUser' => auth()->user()->can('create', User::class)
             ]
         ]);
     });
 
     Route::get('/users/create', function(){
         return Inertia::render('Users/Create');
-    });
+    })->middleware('can:create, App\Models\User');
 
     Route::post('/users', function(){
         //validate the request
