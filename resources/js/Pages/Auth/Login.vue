@@ -4,7 +4,8 @@
 
 <script>
 export default {
-    name: "Login"
+    name: "Login",
+    layout: null
 }
 </script>
 
